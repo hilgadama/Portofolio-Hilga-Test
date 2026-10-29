@@ -45,13 +45,13 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-case-title"
-      className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-zinc-950/80 p-4 backdrop-blur-md transition-opacity"
+      className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-slate-950/80 p-4 backdrop-blur-md transition-opacity"
     >
-      <div className="relative my-8 max-h-[92vh] w-full max-w-4xl overflow-y-auto rounded-2xl border border-zinc-200 bg-white shadow-2xl dark:border-zinc-800 dark:bg-[#0E0E12]">
+      <div className="relative my-8 max-h-[92vh] w-full max-w-4xl overflow-y-auto rounded-2xl border border-blue-100 bg-white shadow-2xl shadow-blue-500/10 dark:border-blue-900/60 dark:bg-[#060D1E] dark:shadow-blue-950/60">
         {/* Sticky Modal Top Bar */}
-        <div className="sticky top-0 z-20 flex items-center justify-between border-b border-zinc-200 bg-white/95 px-6 py-4 backdrop-blur-md dark:border-zinc-800 dark:bg-[#0E0E12]/95">
-          <div className="flex items-center gap-2 text-xs text-zinc-500">
-            <span className="font-semibold text-zinc-900 dark:text-zinc-100">{caseStudy.client}</span>
+        <div className="sticky top-0 z-20 flex items-center justify-between border-b border-blue-100 bg-white/95 px-6 py-4 backdrop-blur-md dark:border-blue-950 dark:bg-[#060D1E]/95">
+          <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
+            <span className="font-semibold text-slate-900 dark:text-white">{caseStudy.client}</span>
             <span aria-hidden="true">/</span>
             <span>{caseStudy.year}</span>
             <span aria-hidden="true">/</span>
@@ -61,7 +61,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
           <button
             onClick={onClose}
             aria-label="Tutup studi kasus"
-            className="flex h-8 w-8 items-center justify-center rounded-lg border border-zinc-200 text-zinc-600 transition-colors hover:border-zinc-300 hover:bg-zinc-100 dark:border-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-800"
+            className="flex h-8 w-8 items-center justify-center rounded-lg border border-blue-200 text-slate-600 transition-colors hover:border-blue-400 hover:bg-blue-50 dark:border-blue-900 dark:text-slate-300 dark:hover:bg-blue-950/60"
           >
             <X className="h-4 w-4" />
           </button>
@@ -70,7 +70,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
         {/* Modal Hero Content */}
         <div className="p-6 sm:p-8">
           {/* Unboxed category metadata */}
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-purple-600 dark:text-purple-400">
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-sky-400">
             <span>Studi Kasus UX</span>
             <span aria-hidden="true">·</span>
             <span>{caseStudy.category === 'aksesibilitas' ? 'Aksesibilitas Digital' : caseStudy.category === 'konversi' ? 'Optimasi Konversi' : 'Riset Pengguna'}</span>
@@ -80,17 +80,17 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
 
           <h2
             id="modal-case-title"
-            className="mt-2 text-2xl font-bold tracking-tight text-zinc-950 sm:text-3xl dark:text-white"
+            className="mt-2 text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl dark:text-white"
           >
             {caseStudy.title}
           </h2>
 
-          <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
+          <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-300">
             {caseStudy.subtitle}
           </p>
 
           {/* High-Fidelity Showcase Image Container */}
-          <div className="mt-6 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900">
+          <div className="mt-6 overflow-hidden rounded-xl border border-blue-100 bg-slate-100 dark:border-blue-950 dark:bg-slate-950">
             <img
               src={caseStudy.thumbnail}
               alt={`Tampilan UI dari studi kasus ${caseStudy.title}`}
@@ -100,16 +100,16 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
           </div>
 
           {/* Key Metrics Banner */}
-          <div className="mt-8 grid grid-cols-2 gap-4 rounded-xl border border-zinc-200 bg-zinc-50 p-5 sm:grid-cols-4 dark:border-zinc-800 dark:bg-zinc-900/60">
+          <div className="mt-8 grid grid-cols-2 gap-4 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:grid-cols-4 dark:border-blue-950 dark:bg-[#0A1428]/60">
             {caseStudy.metrics.map((metric, idx) => (
               <div key={idx} className="flex flex-col">
-                <span className="font-mono text-2xl font-bold text-zinc-950 tabular-nums dark:text-white">
+                <span className="font-mono text-2xl font-bold text-slate-950 tabular-nums dark:text-white">
                   {metric.value}
                 </span>
-                <span className="mt-1 text-xs font-semibold text-zinc-700 dark:text-zinc-300">
+                <span className="mt-1 text-xs font-semibold text-slate-700 dark:text-blue-100">
                   {metric.label}
                 </span>
-                <span className="mt-0.5 text-[11px] text-zinc-500 dark:text-zinc-400">
+                <span className="mt-0.5 text-[11px] text-slate-500 dark:text-slate-400">
                   {metric.detail}
                 </span>
               </div>
@@ -117,7 +117,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
           </div>
 
           {/* Deep-Dive Navigation Tabs */}
-          <div className="mt-8 flex border-b border-zinc-200 dark:border-zinc-800">
+          <div className="mt-8 flex border-b border-blue-100 dark:border-blue-950">
             {[
               { id: 'overview', label: 'Ringkasan & Tantangan' },
               { id: 'research', label: 'Riset & Temuan Kunci' },
@@ -129,8 +129,8 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
                 onClick={() => setActiveTab(tab.id as any)}
                 className={`border-b-2 px-4 py-2.5 text-xs font-medium transition-all ${
                   activeTab === tab.id
-                    ? 'border-purple-600 text-zinc-950 font-bold dark:border-purple-400 dark:text-white'
-                    : 'border-transparent text-zinc-500 hover:text-zinc-900 dark:hover:text-white'
+                    ? 'border-blue-600 text-blue-900 font-bold dark:border-sky-400 dark:text-white'
+                    : 'border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-white'
                 }`}
               >
                 {tab.label}
@@ -142,26 +142,26 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
           {activeTab === 'overview' && (
             <div className="mt-6 space-y-6">
               <div>
-                <h3 className="text-sm font-bold text-zinc-900 dark:text-white">
+                <h3 className="text-sm font-bold text-slate-900 dark:text-white">
                   Latar Belakang Proyek
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">
+                <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
                   {caseStudy.overview}
                 </p>
               </div>
 
-              <div className="rounded-xl border border-zinc-200 bg-zinc-50/50 p-5 dark:border-zinc-800 dark:bg-zinc-900/30">
-                <h3 className="text-sm font-bold text-zinc-900 dark:text-white">
+              <div className="rounded-xl border border-blue-100 bg-blue-50/30 p-5 dark:border-blue-950 dark:bg-slate-900/40">
+                <h3 className="text-sm font-bold text-slate-900 dark:text-white">
                   Tantangan Desain &amp; Friksi Utama
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">
+                <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
                   {caseStudy.challenge}
                 </p>
               </div>
 
               {/* Before vs After comparison */}
-              <div className="rounded-xl border border-zinc-200 p-5 dark:border-zinc-800">
-                <h3 className="text-sm font-bold text-zinc-900 dark:text-white">
+              <div className="rounded-xl border border-blue-100 p-5 dark:border-blue-950">
+                <h3 className="text-sm font-bold text-slate-900 dark:text-white">
                   Perbandingan Alur: Sebelum vs. Sesudah Desain Ulang
                 </h3>
                 <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -169,21 +169,21 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
                     <span className="text-xs font-bold text-red-700 dark:text-red-400">
                       {caseStudy.beforeAfter.beforeLabel}
                     </span>
-                    <p className="mt-1.5 text-xs text-zinc-600 dark:text-zinc-300">
+                    <p className="mt-1.5 text-xs text-slate-600 dark:text-slate-300">
                       {caseStudy.beforeAfter.beforeText}
                     </p>
                   </div>
 
-                  <div className="rounded-lg border border-emerald-200/80 bg-emerald-50/40 p-4 dark:border-emerald-900/40 dark:bg-emerald-950/20">
-                    <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400">
+                  <div className="rounded-lg border border-blue-200/80 bg-blue-50/40 p-4 dark:border-blue-800/40 dark:bg-blue-950/20">
+                    <span className="text-xs font-bold text-blue-700 dark:text-sky-300">
                       {caseStudy.beforeAfter.afterLabel}
                     </span>
-                    <p className="mt-1.5 text-xs text-zinc-600 dark:text-zinc-300">
+                    <p className="mt-1.5 text-xs text-slate-600 dark:text-slate-300">
                       {caseStudy.beforeAfter.afterText}
                     </p>
                   </div>
                 </div>
-                <div className="mt-3 flex items-center gap-2 text-xs font-semibold text-purple-700 dark:text-purple-300">
+                <div className="mt-3 flex items-center gap-2 text-xs font-semibold text-blue-700 dark:text-sky-300">
                   <TrendingUp className="h-4 w-4" />
                   <span>{caseStudy.beforeAfter.improvementMetric}</span>
                 </div>
@@ -194,7 +194,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
           {/* Tab 2: Research */}
           {activeTab === 'research' && (
             <div className="mt-6 space-y-6">
-              <h3 className="text-sm font-bold text-zinc-900 dark:text-white">
+              <h3 className="text-sm font-bold text-slate-900 dark:text-white">
                 Metodologi Riset &amp; Temuan Kualitatif
               </h3>
 
@@ -202,17 +202,17 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
                 {caseStudy.researchInsights.map((insight, idx) => (
                   <div
                     key={idx}
-                    className="rounded-xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-900/50"
+                    className="rounded-xl border border-blue-100 bg-white p-5 dark:border-blue-950 dark:bg-slate-900/50"
                   >
                     <div className="flex items-center justify-between">
-                      <h4 className="text-sm font-bold text-zinc-900 dark:text-white">
+                      <h4 className="text-sm font-bold text-slate-900 dark:text-white">
                         {insight.title}
                       </h4>
-                      <span className="text-[11px] text-zinc-500 font-medium">
+                      <span className="text-[11px] text-blue-600 dark:text-sky-400 font-medium">
                         {insight.method}
                       </span>
                     </div>
-                    <p className="mt-2 text-xs leading-relaxed text-zinc-600 dark:text-zinc-300">
+                    <p className="mt-2 text-xs leading-relaxed text-slate-600 dark:text-slate-300">
                       {insight.finding}
                     </p>
                   </div>
@@ -225,27 +225,27 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
           {activeTab === 'solution' && (
             <div className="mt-6 space-y-6">
               <div>
-                <h3 className="text-sm font-bold text-zinc-900 dark:text-white">
+                <h3 className="text-sm font-bold text-slate-900 dark:text-white">
                   Pendekatan Solusi Antarmuka
                 </h3>
                 <ul className="mt-3 space-y-2">
                   {caseStudy.solutionApproach.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-xs text-zinc-600 dark:text-zinc-300">
-                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-purple-600 dark:text-purple-400" />
+                    <li key={idx} className="flex items-start gap-2.5 text-xs text-slate-600 dark:text-slate-300">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-blue-600 dark:text-sky-400" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="border-t border-zinc-200 pt-5 dark:border-zinc-800">
-                <h3 className="text-sm font-bold text-zinc-900 dark:text-white">
+              <div className="border-t border-blue-100 pt-5 dark:border-blue-950">
+                <h3 className="text-sm font-bold text-slate-900 dark:text-white">
                   Peningkatan Aksesibilitas Spesifik (WCAG 2.1)
                 </h3>
                 <ul className="mt-3 space-y-2">
                   {caseStudy.accessibilityImprovements.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-xs text-zinc-600 dark:text-zinc-300">
-                      <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
+                    <li key={idx} className="flex items-start gap-2.5 text-xs text-slate-600 dark:text-slate-300">
+                      <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-sky-600 dark:text-sky-400" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -258,13 +258,13 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
           {activeTab === 'impact' && (
             <div className="mt-6 space-y-6">
               <div>
-                <h3 className="text-sm font-bold text-zinc-900 dark:text-white">
+                <h3 className="text-sm font-bold text-slate-900 dark:text-white">
                   Optimasi Konversi &amp; Dampak Terukur
                 </h3>
                 <ul className="mt-3 space-y-2">
                   {caseStudy.conversionOptimization.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-xs text-zinc-600 dark:text-zinc-300">
-                      <TrendingUp className="mt-0.5 h-4 w-4 shrink-0 text-purple-600 dark:text-purple-400" />
+                    <li key={idx} className="flex items-start gap-2.5 text-xs text-slate-600 dark:text-slate-300">
+                      <TrendingUp className="mt-0.5 h-4 w-4 shrink-0 text-blue-600 dark:text-sky-400" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -272,16 +272,16 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
               </div>
 
               {caseStudy.testimonial && (
-                <div className="rounded-xl border border-zinc-200 bg-purple-50/40 p-6 dark:border-zinc-800 dark:bg-purple-950/20">
-                  <p className="text-sm italic leading-relaxed text-zinc-700 dark:text-zinc-300">
+                <div className="rounded-xl border border-blue-100 bg-blue-50/50 p-6 dark:border-blue-900/60 dark:bg-[#0A1630]">
+                  <p className="text-sm italic leading-relaxed text-slate-700 dark:text-slate-200">
                     "{caseStudy.testimonial.quote}"
                   </p>
                   <div className="mt-4 flex items-center gap-3">
                     <div>
-                      <p className="text-xs font-bold text-zinc-900 dark:text-white">
+                      <p className="text-xs font-bold text-slate-900 dark:text-white">
                         {caseStudy.testimonial.author}
                       </p>
-                      <p className="text-[11px] text-zinc-500 dark:text-zinc-400">
+                      <p className="text-[11px] text-slate-500 dark:text-slate-400">
                         {caseStudy.testimonial.role} &middot; {caseStudy.testimonial.company}
                       </p>
                     </div>
@@ -292,8 +292,8 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
           )}
 
           {/* Navigation between studies */}
-          <div className="mt-10 border-t border-zinc-200 pt-6 dark:border-zinc-800">
-            <span className="text-xs font-semibold text-zinc-500">Lihat Studi Kasus Lainnya:</span>
+          <div className="mt-10 border-t border-blue-100 pt-6 dark:border-blue-950">
+            <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">Lihat Studi Kasus Lainnya:</span>
             <div className="mt-3 grid grid-cols-1 sm:grid-cols-3 gap-3">
               {allCaseStudies
                 .filter((s) => s.id !== caseStudy.id)
@@ -305,12 +305,12 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
                       onSelectAnother(study);
                       setActiveTab('overview');
                     }}
-                    className="flex flex-col rounded-lg border border-zinc-200 p-3 text-left transition-all hover:border-zinc-400 dark:border-zinc-800 dark:hover:border-zinc-700"
+                    className="flex flex-col rounded-lg border border-blue-100 p-3 text-left transition-all hover:border-blue-300 dark:border-blue-950 dark:hover:border-blue-700"
                   >
-                    <span className="text-xs font-semibold text-zinc-900 line-clamp-1 dark:text-white">
+                    <span className="text-xs font-semibold text-slate-900 line-clamp-1 dark:text-white">
                       {study.title}
                     </span>
-                    <span className="mt-1 text-[11px] text-zinc-500 line-clamp-1">
+                    <span className="mt-1 text-[11px] text-blue-600 dark:text-sky-400 line-clamp-1">
                       {study.metrics[0].value} {study.metrics[0].label}
                     </span>
                   </button>

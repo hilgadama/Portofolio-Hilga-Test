@@ -71,33 +71,33 @@ export const InteractiveA11yLab: React.FC = () => {
   };
 
   return (
-    <section id="aksesibilitas-lab" className="border-b border-zinc-200/80 py-20 dark:border-zinc-800/80">
+    <section id="aksesibilitas-lab" className="border-b border-blue-100/80 py-20 dark:border-blue-950/70">
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-purple-600 dark:text-purple-400">
+            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-sky-400">
               <SlidersHorizontal className="h-3.5 w-3.5" />
               <span>Lab Interaktif Hilga</span>
               <span aria-hidden="true">·</span>
               <span>Inklusivitas &amp; Konversi</span>
             </div>
-            <h2 className="mt-2 text-2xl font-bold tracking-tight text-zinc-950 sm:text-3xl dark:text-white">
+            <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
               Simulator Aksesibilitas &amp; Optimasi Konversi
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+            <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
               Aksesibilitas bukan sekadar kepatuhan hukum, melainkan pilar utama pengalaman pengguna yang memperluas jangkauan pasar dan menaikkan konversi. Coba filter simulasi penglihatan di bawah ini secara langsung.
             </p>
           </div>
 
           {/* Interactive Mode Tabs */}
-          <div className="flex items-center gap-1 rounded-lg border border-zinc-200 bg-zinc-100 p-1 dark:border-zinc-800 dark:bg-zinc-900 shrink-0">
+          <div className="flex items-center gap-1 rounded-lg border border-blue-100 bg-blue-50/50 p-1 dark:border-blue-900/60 dark:bg-slate-900/80 shrink-0">
             <button
               onClick={() => setActiveTab('simulation')}
               className={`rounded-md px-3.5 py-1.5 text-xs font-medium transition-all ${
                 activeTab === 'simulation'
-                  ? 'bg-white text-zinc-950 shadow-xs dark:bg-zinc-800 dark:text-white'
-                  : 'text-zinc-600 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-white'
+                  ? 'bg-blue-600 text-white shadow-xs'
+                  : 'text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-white'
               }`}
             >
               Simulasi Penglihatan
@@ -106,8 +106,8 @@ export const InteractiveA11yLab: React.FC = () => {
               onClick={() => setActiveTab('contrast')}
               className={`rounded-md px-3.5 py-1.5 text-xs font-medium transition-all ${
                 activeTab === 'contrast'
-                  ? 'bg-white text-zinc-950 shadow-xs dark:bg-zinc-800 dark:text-white'
-                  : 'text-zinc-600 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-white'
+                  ? 'bg-blue-600 text-white shadow-xs'
+                  : 'text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-white'
               }`}
             >
               Kalkulator Kontras WCAG
@@ -116,8 +116,8 @@ export const InteractiveA11yLab: React.FC = () => {
               onClick={() => setActiveTab('conversion')}
               className={`rounded-md px-3.5 py-1.5 text-xs font-medium transition-all ${
                 activeTab === 'conversion'
-                  ? 'bg-white text-zinc-950 shadow-xs dark:bg-zinc-800 dark:text-white'
-                  : 'text-zinc-600 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-white'
+                  ? 'bg-blue-600 text-white shadow-xs'
+                  : 'text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-white'
               }`}
             >
               Komparasi Friksi vs Konversi
@@ -129,12 +129,12 @@ export const InteractiveA11yLab: React.FC = () => {
         {activeTab === 'simulation' && (
           <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-12">
             {/* Control Panel (4 cols) */}
-            <div className="flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900/60 lg:col-span-4">
+            <div className="flex flex-col justify-between rounded-xl border border-blue-100 bg-white p-6 shadow-xs dark:border-blue-900/50 dark:bg-[#071126] lg:col-span-4">
               <div>
-                <h3 className="text-sm font-semibold text-zinc-900 dark:text-white">
+                <h3 className="text-sm font-semibold text-slate-900 dark:text-white">
                   Pilih Kondisi Penglihatan
                 </h3>
-                <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
+                <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
                   Uji bagaimana desain antarmuka terbaca oleh jutaan pengguna dengan variasi persepsi warna dan penglihatan.
                 </p>
 
@@ -152,19 +152,19 @@ export const InteractiveA11yLab: React.FC = () => {
                       onClick={() => setA11yFilter(mode.id as A11yFilterMode)}
                       className={`flex flex-col rounded-lg border p-3 text-left transition-all ${
                         a11yFilter === mode.id
-                          ? 'border-purple-500 bg-purple-50/50 dark:border-purple-400 dark:bg-purple-950/30'
-                          : 'border-zinc-200 bg-transparent hover:border-zinc-300 dark:border-zinc-800 dark:hover:border-zinc-700'
+                          ? 'border-blue-500 bg-blue-50/70 shadow-xs dark:border-sky-400 dark:bg-blue-950/40'
+                          : 'border-blue-100/70 bg-transparent hover:border-blue-300 dark:border-slate-800 dark:hover:border-slate-700'
                       }`}
                     >
                       <div className="flex items-center justify-between">
-                        <span className="text-xs font-semibold text-zinc-900 dark:text-white">
+                        <span className="text-xs font-semibold text-slate-900 dark:text-white">
                           {mode.label}
                         </span>
                         {a11yFilter === mode.id && (
-                          <span className="h-2 w-2 rounded-full bg-purple-600 dark:bg-purple-400" />
+                          <span className="h-2 w-2 rounded-full bg-blue-600 dark:bg-sky-400 ring-2 ring-blue-200 dark:ring-blue-900" />
                         )}
                       </div>
-                      <span className="mt-0.5 text-[11px] text-zinc-500 dark:text-zinc-400">
+                      <span className="mt-0.5 text-[11px] text-slate-500 dark:text-slate-400">
                         {mode.desc}
                       </span>
                     </button>
@@ -173,13 +173,13 @@ export const InteractiveA11yLab: React.FC = () => {
               </div>
 
               {a11yFilter !== 'none' && (
-                <div className="mt-4 pt-4 border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-between">
-                  <span className="text-xs text-purple-600 dark:text-purple-400 font-medium">
+                <div className="mt-4 pt-4 border-t border-blue-100 dark:border-blue-900/60 flex items-center justify-between">
+                  <span className="text-xs text-blue-600 dark:text-sky-400 font-medium">
                     Filter sedang aktif di layar
                   </span>
                   <button
                     onClick={() => setA11yFilter('none')}
-                    className="text-xs font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white underline"
+                    className="text-xs font-medium text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-white underline"
                   >
                     Reset Normal
                   </button>
@@ -188,13 +188,13 @@ export const InteractiveA11yLab: React.FC = () => {
             </div>
 
             {/* Interactive Preview Canvas (8 cols) */}
-            <div className="flex flex-col justify-center rounded-xl border border-zinc-200 bg-zinc-50/50 p-6 sm:p-10 dark:border-zinc-800 dark:bg-zinc-950/40 lg:col-span-8">
-              <div className="mx-auto w-full max-w-lg rounded-2xl border border-zinc-200 bg-white p-6 shadow-md dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="flex flex-col justify-center rounded-xl border border-blue-100 bg-blue-50/30 p-6 sm:p-10 dark:border-blue-900/50 dark:bg-[#040916]/80 lg:col-span-8">
+              <div className="mx-auto w-full max-w-lg rounded-2xl border border-blue-100 bg-white p-6 shadow-md shadow-blue-500/5 dark:border-slate-800 dark:bg-[#071126]">
                 {/* Header of component */}
-                <div className="flex items-center justify-between border-b border-zinc-100 pb-4 dark:border-zinc-800">
+                <div className="flex items-center justify-between border-b border-blue-50 pb-4 dark:border-slate-800">
                   <div>
-                    <span className="text-xs font-medium text-zinc-400">Fluent Bank Onboarding</span>
-                    <h4 className="text-base font-bold text-zinc-900 dark:text-white">
+                    <span className="text-xs font-medium text-blue-600 dark:text-sky-400">Fluent Bank Onboarding</span>
+                    <h4 className="text-base font-bold text-slate-900 dark:text-white">
                       Verifikasi Data Diri (e-KYC)
                     </h4>
                   </div>
@@ -203,8 +203,8 @@ export const InteractiveA11yLab: React.FC = () => {
                       onClick={() => setIsLargeText(!isLargeText)}
                       className={`rounded px-2.5 py-1 text-[11px] font-medium border ${
                         isLargeText
-                          ? 'border-purple-500 bg-purple-50 text-purple-700 dark:bg-purple-950 dark:text-purple-300'
-                          : 'border-zinc-200 text-zinc-600 dark:border-zinc-700 dark:text-zinc-400'
+                          ? 'border-blue-500 bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-sky-300'
+                          : 'border-blue-100 text-slate-600 dark:border-slate-700 dark:text-slate-400'
                       }`}
                       title="Skala Teks Fleksibel (Dynamic Type)"
                     >
@@ -216,7 +216,7 @@ export const InteractiveA11yLab: React.FC = () => {
                           'Langkah satu dari tiga. Masukkan nama lengkap sesuai e-KTP. Pastikan ejaan tepat.'
                         )
                       }
-                      className="flex h-8 w-8 items-center justify-center rounded border border-zinc-200 text-zinc-600 hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-400 dark:hover:bg-zinc-800"
+                      className="flex h-8 w-8 items-center justify-center rounded border border-blue-100 text-slate-600 hover:bg-blue-50 hover:text-blue-600 dark:border-slate-700 dark:text-slate-400 dark:hover:bg-slate-800"
                       title="Dengarkan Panduan Audio (Screen Reader)"
                       aria-label="Bacakan panduan"
                     >
@@ -226,15 +226,15 @@ export const InteractiveA11yLab: React.FC = () => {
                 </div>
 
                 {/* Progress bar */}
-                <div className="mt-4 flex items-center justify-between text-xs text-zinc-500">
+                <div className="mt-4 flex items-center justify-between text-xs text-slate-500">
                   <span>Tahap {sampleStep} dari 3</span>
-                  <span className="font-semibold text-zinc-800 dark:text-zinc-200">
+                  <span className="font-semibold text-slate-800 dark:text-slate-200">
                     {sampleStep === 1 ? 'Data Personal' : sampleStep === 2 ? 'Foto KTP' : 'Selesai'}
                   </span>
                 </div>
-                <div className="mt-1.5 h-1.5 w-full rounded-full bg-zinc-100 dark:bg-zinc-800">
+                <div className="mt-1.5 h-1.5 w-full rounded-full bg-blue-100/60 dark:bg-slate-800">
                   <div
-                    className="h-1.5 rounded-full bg-zinc-900 dark:bg-purple-400 transition-all duration-300"
+                    className="h-1.5 rounded-full bg-blue-600 dark:bg-sky-400 transition-all duration-300"
                     style={{ width: `${(sampleStep / 3) * 100}%` }}
                   />
                 </div>
@@ -246,7 +246,7 @@ export const InteractiveA11yLab: React.FC = () => {
                       <div>
                         <label
                           htmlFor="sample-name"
-                          className={`block font-semibold text-zinc-800 dark:text-zinc-200 ${
+                          className={`block font-semibold text-slate-800 dark:text-slate-200 ${
                             isLargeText ? 'text-base' : 'text-xs'
                           }`}
                         >
@@ -257,11 +257,11 @@ export const InteractiveA11yLab: React.FC = () => {
                           type="text"
                           value={fullName}
                           onChange={(e) => setFullName(e.target.value)}
-                          className={`mt-1.5 w-full rounded-lg border border-zinc-300 bg-white px-3.5 py-2.5 text-zinc-900 shadow-xs focus:border-purple-600 focus:ring-1 focus:ring-purple-600 dark:border-zinc-700 dark:bg-zinc-800 dark:text-white ${
+                          className={`mt-1.5 w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 text-slate-900 shadow-xs focus:border-blue-600 focus:ring-1 focus:ring-blue-600 dark:border-slate-700 dark:bg-[#0a152d] dark:text-white ${
                             isLargeText ? 'text-base' : 'text-sm'
                           }`}
                         />
-                        <p className="mt-1 text-[11px] text-zinc-500 dark:text-zinc-400">
+                        <p className="mt-1 text-[11px] text-slate-500 dark:text-slate-400">
                           Gunakan huruf kapital sesuai yang tertera pada kartu fisik.
                         </p>
                       </div>
@@ -269,7 +269,7 @@ export const InteractiveA11yLab: React.FC = () => {
                       <div className="rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/20">
                         <div className="flex items-start gap-2.5">
                           <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
-                          <p className={`text-zinc-700 dark:text-zinc-300 ${isLargeText ? 'text-sm' : 'text-xs'}`}>
+                          <p className={`text-slate-700 dark:text-slate-300 ${isLargeText ? 'text-sm' : 'text-xs'}`}>
                             <strong>Validasi Otomatis:</strong> NIK &amp; Nama terhubung langsung ke Dukcapil via enkripsi 256-bit.
                           </p>
                         </div>
@@ -279,13 +279,13 @@ export const InteractiveA11yLab: React.FC = () => {
 
                   {sampleStep === 2 && (
                     <div className="text-center py-4">
-                      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-purple-50 text-purple-600 dark:bg-purple-950/50 dark:text-purple-300">
+                      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-950/50 dark:text-sky-300">
                         <Sparkles className="h-7 w-7" />
                       </div>
-                      <h5 className="mt-3 text-sm font-bold text-zinc-900 dark:text-white">
+                      <h5 className="mt-3 text-sm font-bold text-slate-900 dark:text-white">
                         Pemindaian e-KTP Cerdas
                       </h5>
-                      <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400 max-w-xs mx-auto">
+                      <p className="mt-1 text-xs text-slate-500 dark:text-slate-400 max-w-xs mx-auto">
                         Posisikan kartu Anda di dalam bingkai. Sensor akan otomatis mendeteksi pantulan cahaya berlebih.
                       </p>
                     </div>
@@ -296,17 +296,17 @@ export const InteractiveA11yLab: React.FC = () => {
                       <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 dark:bg-emerald-950/50 dark:text-emerald-300">
                         <Check className="h-7 w-7" />
                       </div>
-                      <h5 className="mt-3 text-sm font-bold text-zinc-900 dark:text-white">
+                      <h5 className="mt-3 text-sm font-bold text-slate-900 dark:text-white">
                         Verifikasi Selesai!
                       </h5>
-                      <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
+                      <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
                         Akun aktif dan siap bertransaksi dalam 60 detik.
                       </p>
                     </div>
                   )}
 
                   {audioFeedbackPlayed && (
-                    <div className="rounded-md bg-purple-100 p-2 text-center text-xs text-purple-800 dark:bg-purple-950 dark:text-purple-200">
+                    <div className="rounded-md bg-blue-100 p-2 text-center text-xs text-blue-800 dark:bg-blue-950 dark:text-sky-200">
                       Audio panduan dibacakan untuk pengguna pembaca layar
                     </div>
                   )}
@@ -316,7 +316,7 @@ export const InteractiveA11yLab: React.FC = () => {
                     {sampleStep > 1 ? (
                       <button
                         onClick={() => setSampleStep(sampleStep - 1)}
-                        className="rounded-lg px-4 py-2 text-xs font-semibold text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                        className="rounded-lg px-4 py-2 text-xs font-semibold text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
                       >
                         Kembali
                       </button>
@@ -329,7 +329,7 @@ export const InteractiveA11yLab: React.FC = () => {
                         if (sampleStep < 3) setSampleStep(sampleStep + 1);
                         else setSampleStep(1);
                       }}
-                      className="rounded-lg bg-zinc-900 px-5 py-2.5 text-xs font-semibold text-white transition-all hover:bg-zinc-800 active:scale-95 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white"
+                      className="rounded-lg bg-blue-600 px-5 py-2.5 text-xs font-semibold text-white transition-all hover:bg-blue-500 active:scale-95 shadow-xs shadow-blue-500/25"
                     >
                       {sampleStep === 3 ? 'Ulangi Contoh' : 'Lanjut Verifikasi'}
                     </button>
@@ -343,17 +343,17 @@ export const InteractiveA11yLab: React.FC = () => {
         {/* Tab 2: Contrast Calculator */}
         {activeTab === 'contrast' && (
           <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-12">
-            <div className="rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900/60 lg:col-span-5">
-              <h3 className="text-sm font-semibold text-zinc-900 dark:text-white">
+            <div className="rounded-xl border border-blue-100 bg-white p-6 shadow-xs dark:border-blue-900/50 dark:bg-[#071126] lg:col-span-5">
+              <h3 className="text-sm font-semibold text-slate-900 dark:text-white">
                 Preset &amp; Penyesuaian Kontras
               </h3>
-              <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
+              <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
                 Pilih palet atau masukkan kode heksadesimal untuk menguji rasio kontras terhadap standar WCAG 2.1.
               </p>
 
               <div className="mt-5 space-y-4">
                 <div>
-                  <label className="text-xs font-semibold text-zinc-700 dark:text-zinc-300">
+                  <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
                     Warna Teks (Foreground)
                   </label>
                   <div className="mt-1 flex items-center gap-2">
@@ -361,19 +361,19 @@ export const InteractiveA11yLab: React.FC = () => {
                       type="color"
                       value={textColor}
                       onChange={(e) => setTextColor(e.target.value)}
-                      className="h-9 w-12 rounded cursor-pointer border border-zinc-200 dark:border-zinc-700"
+                      className="h-9 w-12 rounded cursor-pointer border border-blue-200 dark:border-slate-700"
                     />
                     <input
                       type="text"
                       value={textColor}
                       onChange={(e) => setTextColor(e.target.value)}
-                      className="w-full rounded-md border border-zinc-300 px-3 py-1.5 font-mono text-xs dark:border-zinc-700 dark:bg-zinc-800"
+                      className="w-full rounded-md border border-slate-300 px-3 py-1.5 font-mono text-xs dark:border-slate-700 dark:bg-[#0a152d] dark:text-white"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-xs font-semibold text-zinc-700 dark:text-zinc-300">
+                  <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
                     Warna Latar (Background)
                   </label>
                   <div className="mt-1 flex items-center gap-2">
@@ -381,53 +381,53 @@ export const InteractiveA11yLab: React.FC = () => {
                       type="color"
                       value={bgColor}
                       onChange={(e) => setBgColor(e.target.value)}
-                      className="h-9 w-12 rounded cursor-pointer border border-zinc-200 dark:border-zinc-700"
+                      className="h-9 w-12 rounded cursor-pointer border border-blue-200 dark:border-slate-700"
                     />
                     <input
                       type="text"
                       value={bgColor}
                       onChange={(e) => setBgColor(e.target.value)}
-                      className="w-full rounded-md border border-zinc-300 px-3 py-1.5 font-mono text-xs dark:border-zinc-700 dark:bg-zinc-800"
+                      className="w-full rounded-md border border-slate-300 px-3 py-1.5 font-mono text-xs dark:border-slate-700 dark:bg-[#0a152d] dark:text-white"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <span className="text-xs font-medium text-zinc-500">Preset Standar Hilga:</span>
+                  <span className="text-xs font-medium text-slate-500 dark:text-slate-400">Preset Standar Hilga:</span>
                   <div className="mt-2 flex flex-wrap gap-2">
                     <button
                       onClick={() => {
-                        setTextColor('#09090B');
+                        setTextColor('#030712');
                         setBgColor('#FFFFFF');
                       }}
-                      className="rounded border border-zinc-200 px-2.5 py-1 text-xs font-medium dark:border-zinc-700"
+                      className="rounded border border-blue-200 px-2.5 py-1 text-xs font-medium hover:border-blue-400 dark:border-blue-900 dark:hover:border-blue-700 dark:text-slate-300"
                     >
                       Monokrom Stark (21:1)
                     </button>
                     <button
                       onClick={() => {
-                        setTextColor('#6D28D9');
-                        setBgColor('#F5F3FF');
+                        setTextColor('#1D4ED8');
+                        setBgColor('#EFF6FF');
                       }}
-                      className="rounded border border-zinc-200 px-2.5 py-1 text-xs font-medium dark:border-zinc-700"
+                      className="rounded border border-blue-200 px-2.5 py-1 text-xs font-medium text-blue-700 hover:border-blue-400 dark:border-blue-900 dark:text-blue-300"
                     >
-                      Pastel Lavender AAA (7.8:1)
+                      Biru Elektrik AAA (8.5:1)
                     </button>
                     <button
                       onClick={() => {
-                        setTextColor('#065F46');
-                        setBgColor('#ECFDF5');
+                        setTextColor('#0369A1');
+                        setBgColor('#F0F9FF');
                       }}
-                      className="rounded border border-zinc-200 px-2.5 py-1 text-xs font-medium dark:border-zinc-700"
+                      className="rounded border border-sky-200 px-2.5 py-1 text-xs font-medium text-sky-700 hover:border-sky-400 dark:border-sky-900 dark:text-sky-300"
                     >
-                      Pastel Sage AAA (8.4:1)
+                      Cyan Azure AAA (8.1:1)
                     </button>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900 lg:col-span-7">
+            <div className="flex flex-col justify-between rounded-xl border border-blue-100 bg-white p-6 shadow-xs dark:border-blue-900/50 dark:bg-[#071126] lg:col-span-7">
               {/* Live preview container */}
               <div
                 className="rounded-xl p-8 transition-colors duration-200 border"
@@ -445,16 +445,16 @@ export const InteractiveA11yLab: React.FC = () => {
               </div>
 
               {/* Status Report */}
-              <div className="mt-6 grid grid-cols-3 gap-4 border-t border-zinc-200 pt-6 dark:border-zinc-800">
+              <div className="mt-6 grid grid-cols-3 gap-4 border-t border-blue-100 pt-6 dark:border-blue-900/60">
                 <div className="flex flex-col">
-                  <span className="text-xs text-zinc-500">Rasio Kontras</span>
-                  <span className="font-mono text-2xl font-bold text-zinc-900 dark:text-white tabular-nums">
+                  <span className="text-xs text-slate-500 dark:text-slate-400">Rasio Kontras</span>
+                  <span className="font-mono text-2xl font-bold text-slate-900 dark:text-white tabular-nums">
                     {contrastRatio} : 1
                   </span>
                 </div>
 
                 <div className="flex flex-col">
-                  <span className="text-xs text-zinc-500">WCAG 2.1 AA (&ge;4.5)</span>
+                  <span className="text-xs text-slate-500 dark:text-slate-400">WCAG 2.1 AA (&ge;4.5)</span>
                   <div className="mt-1 flex items-center gap-1.5">
                     {contrastRatio >= 4.5 ? (
                       <>
@@ -471,7 +471,7 @@ export const InteractiveA11yLab: React.FC = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <span className="text-xs text-zinc-500">WCAG 2.1 AAA (&ge;7.0)</span>
+                  <span className="text-xs text-slate-500 dark:text-slate-400">WCAG 2.1 AAA (&ge;7.0)</span>
                   <div className="mt-1 flex items-center gap-1.5">
                     {contrastRatio >= 7.0 ? (
                       <>
@@ -480,8 +480,8 @@ export const InteractiveA11yLab: React.FC = () => {
                       </>
                     ) : (
                       <>
-                        <AlertCircle className="h-4 w-4 text-zinc-400" />
-                        <span className="text-xs font-medium text-zinc-500">Belum AAA</span>
+                        <AlertCircle className="h-4 w-4 text-slate-400" />
+                        <span className="text-xs font-medium text-slate-500">Belum AAA</span>
                       </>
                     )}
                   </div>
@@ -494,8 +494,8 @@ export const InteractiveA11yLab: React.FC = () => {
         {/* Tab 3: Conversion vs Friction */}
         {activeTab === 'conversion' && (
           <div className="mt-10">
-            <div className="flex items-center justify-between border-b border-zinc-200 pb-4 dark:border-zinc-800">
-              <span className="text-sm font-semibold text-zinc-900 dark:text-white">
+            <div className="flex items-center justify-between border-b border-blue-100 pb-4 dark:border-blue-900/60">
+              <span className="text-sm font-semibold text-slate-900 dark:text-white">
                 Bandingkan Alur Antarmuka
               </span>
               <div className="flex items-center gap-2">
@@ -504,7 +504,7 @@ export const InteractiveA11yLab: React.FC = () => {
                   className={`rounded-md px-3 py-1.5 text-xs font-medium transition-all ${
                     viewMode === 'friction'
                       ? 'bg-red-100 text-red-800 dark:bg-red-950/60 dark:text-red-300'
-                      : 'text-zinc-600 hover:text-zinc-900 dark:text-zinc-400'
+                      : 'text-slate-600 hover:text-slate-900 dark:text-slate-400'
                   }`}
                 >
                   Alur Konvensional (Banyak Friksi)
@@ -513,8 +513,8 @@ export const InteractiveA11yLab: React.FC = () => {
                   onClick={() => setViewMode('accessible')}
                   className={`rounded-md px-3 py-1.5 text-xs font-medium transition-all ${
                     viewMode === 'accessible'
-                      ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300'
-                      : 'text-zinc-600 hover:text-zinc-900 dark:text-zinc-400'
+                      ? 'bg-blue-600 text-white shadow-xs'
+                      : 'text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-white'
                   }`}
                 >
                   Alur Optimasi Hilga (Aksesibel + Konversi)
@@ -527,17 +527,17 @@ export const InteractiveA11yLab: React.FC = () => {
               <div
                 className={`rounded-2xl border p-6 transition-all ${
                   viewMode === 'accessible'
-                    ? 'border-emerald-300 bg-white dark:border-emerald-800 dark:bg-zinc-900'
-                    : 'border-red-200 bg-zinc-100/70 dark:border-red-900/40 dark:bg-zinc-900/40'
+                    ? 'border-blue-200 bg-white shadow-sm dark:border-blue-900/80 dark:bg-[#071126]'
+                    : 'border-red-200 bg-slate-50/70 dark:border-red-900/40 dark:bg-[#071126]/40'
                 }`}
               >
-                <div className="flex items-center justify-between pb-4 border-b border-zinc-200 dark:border-zinc-800">
-                  <span className="text-xs font-bold uppercase tracking-wider">
+                <div className="flex items-center justify-between pb-4 border-b border-blue-50 dark:border-blue-950">
+                  <span className="text-xs font-bold uppercase tracking-wider text-slate-800 dark:text-slate-200">
                     {viewMode === 'accessible' ? 'Desain Optimasi Inklusif' : 'Desain Lama Sebelum Audit'}
                   </span>
                   <span
                     className={`font-mono text-xs font-bold ${
-                      viewMode === 'accessible' ? 'text-emerald-600' : 'text-red-500'
+                      viewMode === 'accessible' ? 'text-blue-600 dark:text-sky-400' : 'text-red-500'
                     }`}
                   >
                     {viewMode === 'accessible' ? 'Konversi: 84%' : 'Konversi: 42%'}
@@ -546,37 +546,37 @@ export const InteractiveA11yLab: React.FC = () => {
 
                 {viewMode === 'accessible' ? (
                   <div className="mt-5 space-y-4">
-                    <div className="flex items-center justify-between rounded-lg bg-zinc-50 p-4 dark:bg-zinc-800">
+                    <div className="flex items-center justify-between rounded-lg bg-blue-50/50 p-4 dark:bg-[#0a152d]">
                       <div>
-                        <p className="text-xs font-semibold text-zinc-900 dark:text-white">
+                        <p className="text-xs font-semibold text-slate-900 dark:text-white">
                           Pilihan Pengiriman Terkurasi
                         </p>
-                        <p className="text-[11px] text-zinc-500">Otomatis memilih yang paling hemat &amp; cepat</p>
+                        <p className="text-[11px] text-slate-500">Otomatis memilih yang paling hemat &amp; cepat</p>
                       </div>
-                      <span className="text-xs font-mono font-bold text-zinc-900 dark:text-white">
+                      <span className="text-xs font-mono font-bold text-blue-600 dark:text-sky-400">
                         Rp 12.000
                       </span>
                     </div>
 
-                    <div className="rounded-lg border border-purple-200 bg-purple-50/40 p-3.5 dark:border-purple-900/50 dark:bg-purple-950/20">
-                      <p className="text-xs text-purple-900 dark:text-purple-200">
+                    <div className="rounded-lg border border-blue-200 bg-blue-50/60 p-3.5 dark:border-blue-900/60 dark:bg-blue-950/30">
+                      <p className="text-xs text-blue-950 dark:text-blue-200">
                         <strong>Transparansi Penuh:</strong> Tidak ada biaya admin tersembunyi. Total tagihan sudah final.
                       </p>
                     </div>
 
-                    <button className="w-full rounded-xl bg-zinc-900 py-3 text-xs font-bold text-white transition-transform active:scale-98 dark:bg-zinc-100 dark:text-zinc-900">
+                    <button className="w-full rounded-xl bg-blue-600 py-3 text-xs font-bold text-white shadow-md shadow-blue-600/25 transition-transform active:scale-98 hover:bg-blue-500">
                       Bayar Sekarang &middot; 1 Ketukan Instan
                     </button>
                   </div>
                 ) : (
                   <div className="mt-5 space-y-4 opacity-75">
-                    <div className="rounded border border-dashed border-zinc-300 p-3 text-xs text-zinc-400">
-                      <span className="text-[10px] text-zinc-400">Formulir 7 Kolom Alamat Manual...</span>
+                    <div className="rounded border border-dashed border-slate-300 p-3 text-xs text-slate-400 dark:border-slate-700">
+                      <span className="text-[10px] text-slate-400">Formulir 7 Kolom Alamat Manual...</span>
                     </div>
-                    <div className="text-[11px] text-zinc-400">
+                    <div className="text-[11px] text-slate-400">
                       *Biaya admin dan ongkir baru dihitung di layar berikutnya setelah memasukkan kartu.
                     </div>
-                    <button className="w-full rounded bg-zinc-300 py-1.5 text-[11px] text-zinc-600 cursor-not-allowed">
+                    <button className="w-full rounded bg-slate-200 py-1.5 text-[11px] text-slate-500 cursor-not-allowed dark:bg-slate-800">
                       Lanjutkan (Langkah 1 dari 5)
                     </button>
                   </div>
@@ -584,25 +584,25 @@ export const InteractiveA11yLab: React.FC = () => {
               </div>
 
               {/* Impact Breakdown */}
-              <div className="flex flex-col justify-center rounded-2xl border border-zinc-200 bg-zinc-50 p-6 dark:border-zinc-800 dark:bg-zinc-900/60">
-                <h4 className="text-sm font-semibold text-zinc-900 dark:text-white">
+              <div className="flex flex-col justify-center rounded-2xl border border-blue-100 bg-white p-6 shadow-xs dark:border-blue-900/50 dark:bg-[#071126]">
+                <h4 className="text-sm font-semibold text-slate-900 dark:text-white">
                   Dampak Nyata terhadap Metrik Bisnis:
                 </h4>
-                <ul className="mt-4 space-y-3 text-xs text-zinc-600 dark:text-zinc-400">
+                <ul className="mt-4 space-y-3 text-xs text-slate-600 dark:text-slate-400">
                   <li className="flex items-start gap-2">
-                    <Zap className="mt-0.5 h-4 w-4 shrink-0 text-purple-600 dark:text-purple-400" />
+                    <Zap className="mt-0.5 h-4 w-4 shrink-0 text-blue-600 dark:text-sky-400" />
                     <span>
                       <strong>Mereduksi Abandonment Rate 54%:</strong> Menghilangkan kejutan biaya di halaman terakhir membuat pengguna merasa dihargai dan aman bertransaksi.
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Zap className="mt-0.5 h-4 w-4 shrink-0 text-purple-600 dark:text-purple-400" />
+                    <Zap className="mt-0.5 h-4 w-4 shrink-0 text-blue-600 dark:text-sky-400" />
                     <span>
                       <strong>Peningkatan Aksesibilitas Membuka Pasar Baru:</strong> 15% populasi dengan disabilitas visual dan lansia dapat melakukan pembelian tanpa bantuan orang lain.
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Zap className="mt-0.5 h-4 w-4 shrink-0 text-purple-600 dark:text-purple-400" />
+                    <Zap className="mt-0.5 h-4 w-4 shrink-0 text-blue-600 dark:text-sky-400" />
                     <span>
                       <strong>Efisiensi Waktu Transaksi:</strong> Alur 1 layar memangkas waktu transaksi dari 140 detik menjadi 50 detik, melipatgandakan kepuasan belanja.
                     </span>

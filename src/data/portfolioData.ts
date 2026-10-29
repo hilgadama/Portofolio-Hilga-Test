@@ -50,7 +50,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     duration: '4 Bulan',
     role: 'Lead UX Specialist & Accessibility Architect',
     thumbnail: '/src/assets/images/casestudy_fintech_ui_1793178792207.jpg',
-    accentColor: '#C4B5FD', // Soft pastel lavender
+    accentColor: '#3B82F6', // Futuristic Electric Blue
     metrics: [
       { label: 'Konversi Onboarding', value: '+42%', detail: 'Kenaikan penyelesaian verifikasi e-KYC pada percobaan pertama' },
       { label: 'Standar Kepatuhan', value: 'WCAG 2.1 AAA', detail: 'Memenuhi rasio kontras 7:1 dan navigasi screen reader penuh' },
@@ -117,7 +117,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     duration: '3 Bulan',
     role: 'Senior UX Researcher & Interaction Designer',
     thumbnail: '/src/assets/images/casestudy_health_ui_1793178792228.jpg',
-    accentColor: '#A7F3D0', // Soft pastel mint/sage
+    accentColor: '#0EA5E9', // Futuristic Ocean Azure / Cyan
     metrics: [
       { label: 'Booking Dokter Selesai', value: '+68%', detail: 'Peningkatan tingkat penyelesaian janji temu dari awal triase' },
       { label: 'Waktu Alur Triase', value: '-75%', detail: 'Memangkas waktu identifikasi gejala dari 6 menit menjadi 90 detik' },
@@ -184,7 +184,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     duration: '5 Bulan',
     role: 'Lead UX Specialist & CRO Strategist',
     thumbnail: '/src/assets/images/casestudy_ecommerce_ui_1793178792130.jpg',
-    accentColor: '#FED7AA', // Soft pastel peach
+    accentColor: '#2563EB', // Futuristic Royal Blue
     metrics: [
       { label: 'Rata-rata Nilai Pesanan', value: '+31%', detail: 'Peningkatan Average Order Value berkat rekomendasi checkout cerdas' },
       { label: 'Penurunan Cart Abandonment', value: '-54%', detail: 'Keranjang belanja yang ditinggalkan turun dari 68% ke 31%' },
@@ -251,7 +251,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     duration: '6 Bulan',
     role: 'Design System Architect & Accessibility Specialist',
     thumbnail: '/src/assets/images/casestudy_fintech_ui_1793178792207.jpg',
-    accentColor: '#93C5FD', // Soft pastel ice blue
+    accentColor: '#38BDF8', // Luminous Ice/Sky Blue
     metrics: [
       { label: 'Komponen Aksesibel', value: '120+', detail: 'Lengkap dengan dokumentasi ARIA pattern dan Storybook tests' },
       { label: 'Kecepatan Handover', value: '3x Lebih Cepat', detail: 'Penyelarasan token Figma ke kode React Tailwind' },

@@ -32,7 +32,7 @@ export default function App() {
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-[#FAFAFA] text-zinc-900 transition-colors duration-300 dark:bg-[#09090B] dark:text-zinc-100 flex flex-col">
+      <div className="min-h-screen bg-[#F8FAFC] text-slate-900 transition-colors duration-300 dark:bg-[#030712] dark:text-slate-100 flex flex-col">
         {/* Navigation Bar */}
         <Navbar onOpenContact={() => handleScrollTo('kontak')} />
 

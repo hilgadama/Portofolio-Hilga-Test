@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 150, 150, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 150, 150, 0.5);
+}
+
+/* Focus visible styling for strict WCAG AA / AAA accessibility */
+:focus-visible {
+  outline: 2px solid #8B5CF6;
+  outline-offset: 2px;
+}
+
+/* Accessibility simulation filter effects */
+.filter-protanopia {
+  filter: url('#protanopia-filter');
+}
+
+.filter-deuteranopia {
+  filter: url('#deuteranopia-filter');
+}
+
+.filter-tritanopia {
+  filter: url('#tritanopia-filter');
+}
+
+.filter-low-vision {
+  filter: blur(2px) contrast(85%);
+}
+
+.filter-high-contrast {
+  filter: contrast(160%) brightness(105%);
+}
